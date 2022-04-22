@@ -33,7 +33,7 @@ FROM retirement_titles as rt
 WHERE rt.to_date = '9999-01-01'
 ORDER BY emp_no, to_date DESC;
 
---number of employees by the recent title who retire
+--number of employees by the recent title who retire and the count for each title
 SELECT COUNT(title) FROM Unique_titles;
 
 SELECT u.title,
@@ -42,6 +42,25 @@ INTO retiring_titles_count
 FROM unique_titles as u
 GROUP BY u.title
 ORDER BY COUNT(u.emp_no) DESC;
+
+--Mentorship eligibity table
+SELECT DISTINCT ON (e.emp_no) e.emp_no,
+	e.first_name,
+	e.last_name,
+	e.birth_date,
+	de.from_date,
+	de.to_date,
+	ti.title
+INTO mentorship_eligibilty
+FROM employee as e
+LEFT JOIN departmentemployee as de
+ON e.emp_no = de.emp_no
+LEFT JOIN titles as ti
+ON (e.emp_no = ti.emp_no)
+WHERE de.to_date = ('9999-01-01')
+AND e.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
+ORDER BY e.emp_no;
+ 
 
 --select the employee names whose birthdate is between 1952-1955
 
