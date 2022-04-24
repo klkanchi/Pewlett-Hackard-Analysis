@@ -15,7 +15,9 @@ Bobby's manager wants him to write SQL queries to determine the number of retiri
 
 ### Results with detail analysis:
 [retirement_titles.csv](https://github.com/klkanchi/Pewlett-Hackard-Analysis/blob/main/Analysis_Projects/Pewlett-Hackard-Analysis/Data/retirement_titles.csv)
+
 [unique_titles.csv](https://github.com/klkanchi/Pewlett-Hackard-Analysis/blob/main/Analysis_Projects/Pewlett-Hackard-Analysis/Data/unique_titles.csv)
+
 [retiring_titles_count.csv](https://github.com/klkanchi/Pewlett-Hackard-Analysis/blob/main/Analysis_Projects/Pewlett-Hackard-Analysis/Data/retiring_titles_count.csv)
 
 **SQL Query**
